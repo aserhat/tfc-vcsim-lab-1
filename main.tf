@@ -12,17 +12,17 @@ data "vsphere_datacenter" "dc" {
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "LocalDS_0"
+  name          = "datastore/LocalDS_0"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_resource_pool" "pool" {
-  name          = "DC0_C0/Resources"
+  name          = "DC0_H0/Resources"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_network" "network" {
-  name          = "VM Network"
+  name          = "network/VM Network"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
