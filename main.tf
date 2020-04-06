@@ -1,7 +1,7 @@
 provider "vsphere" {
   user           = "user"
   password       = "pass"
-  vsphere_server = "10.128.0.15:8989"
+  vsphere_server = "35.222.146.209:8989"
 
   # If you have a self-signed cert
   allow_unverified_ssl = true
