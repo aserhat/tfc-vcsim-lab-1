@@ -31,6 +31,31 @@ resource "vsphere_virtual_machine" "terraform-test-01" {
   resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
 
+  wait_for_guest_ip_timeout = false
+  wait_for_guest_net_timeout = false
+
+  num_cpus = 1
+  memory   = 2048
+  guest_id = "other3xLinux64Guest"
+
+  network_interface {
+    network_id = data.vsphere_network.network.id
+  }
+
+  disk {
+    label = "disk0"
+    size  = 20
+  }
+}
+
+resource "vsphere_virtual_machine" "terraform-test-02" {
+  name             = "terraform-test-02"
+  resource_pool_id = data.vsphere_resource_pool.pool.id
+  datastore_id     = data.vsphere_datastore.datastore.id
+
+  wait_for_guest_ip_timeout = false
+  wait_for_guest_net_timeout = false
+
   num_cpus = 1
   memory   = 2048
   guest_id = "other3xLinux64Guest"
