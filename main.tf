@@ -38,6 +38,12 @@ resource "vsphere_virtual_machine" "terraform-test-01" {
   memory   = 2048
   guest_id = "other3xLinux64Guest"
 
+  disk {
+    label = "terraform-test-01-disk-01"
+    size = "10"
+    datastore_id = data.vsphere_datastore.datastore.id
+  }
+
   network_interface {
     network_id = data.vsphere_network.network.id
   }
@@ -54,6 +60,12 @@ resource "vsphere_virtual_machine" "terraform-test-02" {
   num_cpus = 1
   memory   = 2048
   guest_id = "other3xLinux64Guest"
+
+  disk {
+    label = "terraform-test-01-disk-01"
+    size = "10"
+    datastore_id = data.vsphere_datastore.datastore.id
+  }
 
   network_interface {
     network_id = data.vsphere_network.network.id
