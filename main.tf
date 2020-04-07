@@ -56,7 +56,7 @@ resource "vsphere_virtual_machine" "terraform-test-02" {
   wait_for_guest_ip_timeout = 0 
   wait_for_guest_net_timeout = 0
 
-  num_cpus = 2
+  num_cpus = 1
   memory   = 2048
   guest_id = "other3xLinux64Guest"
 
