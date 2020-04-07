@@ -1,7 +1,7 @@
 provider "vsphere" {
-  user           = "user"
-  password       = "pass"
-  vsphere_server = "35.222.146.209:8989"
+  user           = var.vcsim_vc_user
+  password       = var.vcsim_vc_pass
+  vsphere_server = "34.69.0.68:8989"
 
   # If you have a self-signed cert
   allow_unverified_ssl = true
