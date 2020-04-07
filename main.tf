@@ -8,16 +8,16 @@ provider "vsphere" {
 }
 
 data "vsphere_datacenter" "dc" {
-  name = "DC0"
+  name = "godc"
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "datastore/LocalDS_0"
+  name          = "datastore/gostore"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_resource_pool" "pool" {
-  name          = "DC0_H0/Resources"
+  name          = "gocluster/Resources"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
