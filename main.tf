@@ -32,7 +32,6 @@ resource "vsphere_virtual_machine" "terraform-test-01" {
   datastore_id     = data.vsphere_datastore.datastore.id
 
   wait_for_guest_ip_timeout = 0
-  wait_for_guest_net_timeout = 0
 
   num_cpus = 1
   memory   = 2048
@@ -54,7 +53,6 @@ resource "vsphere_virtual_machine" "terraform-test-02" {
   datastore_id     = data.vsphere_datastore.datastore.id
 
   wait_for_guest_ip_timeout = 0
-  wait_for_guest_net_timeout = 0
 
   num_cpus = 2
   memory   = 2048
