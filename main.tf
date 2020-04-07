@@ -41,11 +41,6 @@ resource "vsphere_virtual_machine" "terraform-test-01" {
   network_interface {
     network_id = data.vsphere_network.network.id
   }
-
-  disk {
-    label = "terraform-test-01-disk0"
-    size  = 20
-  }
 }
 
 resource "vsphere_virtual_machine" "terraform-test-02" {
@@ -62,10 +57,5 @@ resource "vsphere_virtual_machine" "terraform-test-02" {
 
   network_interface {
     network_id = data.vsphere_network.network.id
-  }
-
-  disk {
-    label = "terraform-test-02-disk0"
-    size  = 20
   }
 }
