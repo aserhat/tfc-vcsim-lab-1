@@ -7,3 +7,4 @@ A small demo using Terraform Cloud to manage remote state of a few vSphere VM's.
   * Follow this guide [Terraform Cloud Setup](https://github.com/aserhat/tfc-workspaces)
     * Gets the workspace setup in Terraform Cloud and connects it to this repository.
   * Place this code in your repo and push it up and watch the VM's defined get created.
+    * Will need update main.tf with the IP of your vCenter (or VM running vcsim)
